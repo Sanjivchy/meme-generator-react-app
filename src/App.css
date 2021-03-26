@@ -4,7 +4,7 @@
 
 body{
 margin: 0;
-background-color: #6d6875;
+background-color: #d8d3df;
 color: white;
 }
 header{
@@ -25,4 +25,19 @@ header > p{
   color:whitesmoke;
   font-size: 3rem;
   margin: 0 auto;
+}
+.meme-form{
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content:space-between;
+  border: 1px solid black;
+}
+.meme-form > button{
+  border: none;
+  font-family: VT323, monospace;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  color: white;
+ background: #6441a5;
 }
