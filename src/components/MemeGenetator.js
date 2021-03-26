@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from './Header'
 
 class MemeGenetator extends Component {
     constructor(props) {
@@ -24,14 +23,17 @@ class MemeGenetator extends Component {
             })
     }
 hangleChange(event){
-console.log("working")
+    const {name ,value}= event.target
+    this.setState({
+        [name]:value
+    })
+
+
 }
     
     render() {
         return (
             <div>
-               <Header/>
-
                 <form className="meme-form">
                     <input type="text"
                     name="topText"
@@ -48,6 +50,12 @@ console.log("working")
                     />
                     <button>Gen</button>
                 </form>
+                <div className="meme">     
+                     <img src={this.state.randomImg} alt=""/>
+                     <h2 className="top">{this.state.topText}</h2>
+                     <h2 className="bottom">{this.state.bottomText}</h2>
+
+                </div>
             </div>
         )
     }
